@@ -1,6 +1,6 @@
 const WorkInProgress = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center bg-gray-100 h-full">
       <div className="text-center p-8 rounded-lg shadow-lg bg-white">
         <div className="flex items-center justify-center mb-4">
           <svg

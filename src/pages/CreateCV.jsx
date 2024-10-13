@@ -18,9 +18,9 @@ const CreateCV = () => {
   const isStepActive = (step) => currentStep === step;
 
   return (
-    <div className="w-full mx-auto p-8">
+    <div className="w-full max-w-4xl mx-auto p-8">
       {/* Stepper Progress Bar */}
-      <div className="max-w-3xl m-auto flex justify-between items-center mb-8 relative">
+      <div className="m-auto flex justify-between items-center mb-8 relative">
         {/* Progress Lines */}
         {/* <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between">
           <div
