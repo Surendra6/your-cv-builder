@@ -3,8 +3,11 @@ import Home from "./pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./components/Header";
-import WorkInProgress from "./pages/WorkInProgress";
 import UserPrivacy from "./pages/UserPrivacy";
+import CVBuilder from "./pages/CVBuilder";
+import CoverLetter from "./pages/CoverLetter";
+import CreateCV from "./pages/CreateCV";
+import CreateCoverLetter from "./pages/CreateCoverLetter";
 
 const queryClient = new QueryClient();
 
@@ -21,27 +24,19 @@ function App() {
               <Route path="/your-cv-builder" element={<Home />} />
               <Route
                 path="/your-cv-builder/cv-builder"
-                element={<WorkInProgress />}
+                element={<CVBuilder />}
               />
               <Route
                 path="/your-cv-builder/cv-builder/:id"
-                element={<WorkInProgress />}
-              />
-              <Route
-                path="/your-cv-builder/cv-builder/:id/edit"
-                element={<WorkInProgress />}
+                element={<CreateCV />}
               />
               <Route
                 path="/your-cv-builder/cover-letter"
-                element={<WorkInProgress />}
+                element={<CoverLetter />}
               />
               <Route
                 path="/your-cv-builder/cover-letter/:id"
-                element={<WorkInProgress />}
-              />
-              <Route
-                path="/your-cv-builder/cover-letter/:id/edit"
-                element={<WorkInProgress />}
+                element={<CreateCoverLetter />}
               />
               <Route
                 path="/your-cv-builder/privacy"
