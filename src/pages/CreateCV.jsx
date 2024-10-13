@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WorkInProgress from "./WorkInProgress";
 import { FaUser, FaUniversity, FaWrench, FaBriefcase } from "react-icons/fa";
+import PersonalDetails from "../components/PersonalDetails";
 
 const CreateCV = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -52,7 +53,7 @@ const CreateCV = () => {
               <FaUser />
             </div>
             <span
-              className={`text-sm ${
+              className={`hidden md:inline text-sm ${
                 isStepActive(1) ? "text-blue-500" : "text-gray-500"
               }`}
             >
@@ -70,7 +71,7 @@ const CreateCV = () => {
               <FaUniversity />
             </div>
             <span
-              className={`text-sm ${
+              className={`hidden md:inline text-sm ${
                 isStepActive(2) ? "text-blue-500" : "text-gray-500"
               }`}
             >
@@ -88,7 +89,7 @@ const CreateCV = () => {
               <FaWrench />
             </div>
             <span
-              className={`text-sm ${
+              className={`hidden md:inline text-sm ${
                 isStepActive(3) ? "text-blue-500" : "text-gray-500"
               }`}
             >
@@ -106,7 +107,7 @@ const CreateCV = () => {
               <FaBriefcase />
             </div>
             <span
-              className={`text-sm ${
+              className={`hidden md:inline text-sm ${
                 isStepActive(4) ? "text-blue-500" : "text-gray-500"
               }`}
             >
@@ -117,7 +118,7 @@ const CreateCV = () => {
       </div>
 
       {/* Stepper Forms */}
-      {currentStep === 1 && <WorkInProgress />}
+      {currentStep === 1 && <PersonalDetails />}
       {currentStep === 2 && <WorkInProgress />}
       {currentStep === 3 && <WorkInProgress />}
       {currentStep === 4 && <WorkInProgress />}
@@ -132,6 +133,7 @@ const CreateCV = () => {
         >
           Previous
         </button>
+
         {currentStep < 4 ? (
           <button
             onClick={handleNext}
