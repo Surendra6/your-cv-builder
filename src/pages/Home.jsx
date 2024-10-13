@@ -19,8 +19,10 @@ const Home = () => {
     </div>
   ) : (
     <>
-      <div className="grid gap-5 py-10 px-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-        Your CV Bulider
+      <div className="flex items-center justify-center h-full">
+        <div className="flex flex-col items-center">
+          <h1>Your CV Bulider</h1>
+        </div>
       </div>
     </>
   );
