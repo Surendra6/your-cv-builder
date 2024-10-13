@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./components/Header";
 import WorkInProgress from "./pages/WorkInProgress";
+import UserPrivacy from "./pages/UserPrivacy";
 
 const queryClient = new QueryClient();
 
@@ -23,8 +24,28 @@ function App() {
                 element={<WorkInProgress />}
               />
               <Route
+                path="/your-cv-builder/cv-builder/:id"
+                element={<WorkInProgress />}
+              />
+              <Route
+                path="/your-cv-builder/cv-builder/:id/edit"
+                element={<WorkInProgress />}
+              />
+              <Route
                 path="/your-cv-builder/cover-letter"
                 element={<WorkInProgress />}
+              />
+              <Route
+                path="/your-cv-builder/cover-letter/:id"
+                element={<WorkInProgress />}
+              />
+              <Route
+                path="/your-cv-builder/cover-letter/:id/edit"
+                element={<WorkInProgress />}
+              />
+              <Route
+                path="/your-cv-builder/privacy"
+                element={<UserPrivacy />}
               />
               <Route path="*" element={<ErrorPage />} />
             </Routes>

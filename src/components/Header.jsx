@@ -9,7 +9,7 @@ const NavLink = ({ label, icon, route, currentPath }) => {
   return (
     <Link
       to={route}
-      className={`text-gray-500 flex flex-col items-center gap-0.5 border-b-2 hover:text-gray-600 ${
+      className={`text-gray-500 flex flex-col items-center gap-0.5 border-b-2 px-2 pb-1 md:pb-0.5 hover:text-gray-600 ${
         route === currentPath ? "border-blue-500 " : "border-transparent"
       }`}
     >
@@ -23,16 +23,19 @@ const Header = () => {
   const { pathname } = useLocation();
 
   return (
-    <header className="bg-white text-gray-400 shadow-md top-0 left-0 w-full">
+    <header className="bg-white text-gray-400 shadow-md w-full py-0.5 md:py-1">
       <div className="mx-auto flex justify-between px-5 items-center">
-        <div className="relative w-full md:w-1/2">
-          <img src={logo} className="size-10" />
+        <div className="flex items-center">
+          <img src={logo} className="size-8 md:size-10 " />
+          <h1 className="text-4xl font-bold text-blue-500 hidden md:inline">
+            Your CV Builder
+          </h1>
         </div>
 
         <nav className="flex items-center gap-5">
           <NavLink
             label="Home"
-            icon={<img src={Home} className="size-6 md:size-5" />}
+            icon={<img src={Home} className="size-6" />}
             route="/your-cv-builder"
             currentPath={pathname}
           />
@@ -52,7 +55,7 @@ const Header = () => {
             href="https://github.com/Surendra6/your-cv-builder"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex bg-white border text-black hover:text-black font-bold size-12 p-3 my-1 rounded-full shadow-sm items-center justify-center"
+            className="flex bg-white border text-black hover:text-black font-bold size-10 md:size-12 p-2 md:p-3 rounded-full shadow-sm items-center justify-center"
           >
             <FaGithub size={30} />
           </a>
