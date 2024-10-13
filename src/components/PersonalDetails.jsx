@@ -2,7 +2,7 @@ const PersonalDetails = () => {
   return (
     <div className="text-black">
       <h2 className="text-lg font-semibold mb-4">Personal Details</h2>
-      <div className="w-full grid gap-5 sm:grid-cols-1 md:grid-cols-2 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <input
           type="text"
           placeholder="First Name"
@@ -42,7 +42,7 @@ const PersonalDetails = () => {
         <input
           type="file"
           placeholder="Profile Picture"
-          className="border p-2 rounded col-span-2"
+          className="border p-2 rounded col-span-1 md:col-span-2"
         />
       </div>
     </div>
