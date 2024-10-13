@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./components/Header";
+import WorkInProgress from "./pages/WorkInProgress";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,14 @@ function App() {
           <div className="w-full h-screen flex flex-col scrollbar overflow-y-auto">
             <Routes>
               <Route path="/your-cv-builder" element={<Home />} />
+              <Route
+                path="/your-cv-builder/cv-builder"
+                element={<WorkInProgress />}
+              />
+              <Route
+                path="/your-cv-builder/cover-letter"
+                element={<WorkInProgress />}
+              />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

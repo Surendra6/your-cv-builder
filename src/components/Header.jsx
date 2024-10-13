@@ -33,7 +33,7 @@ const Header = () => {
           <NavLink
             label="Home"
             icon={<img src={Home} className="size-6 md:size-5" />}
-            route="/your-cv-builder/home"
+            route="/your-cv-builder"
             currentPath={pathname}
           />
           <NavLink
