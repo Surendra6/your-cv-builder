@@ -57,7 +57,7 @@ const CreateCV = () => {
                 isStepActive(1) ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              Personal Details
+              1. Personal Details
             </span>
           </div>
           <div className="flex flex-col items-center">
@@ -75,7 +75,7 @@ const CreateCV = () => {
                 isStepActive(2) ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              Education
+              2. Education
             </span>
           </div>
           <div className="flex flex-col items-center">
@@ -93,7 +93,7 @@ const CreateCV = () => {
                 isStepActive(3) ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              Skills
+              3. Skills
             </span>
           </div>
           <div className="flex flex-col items-center">
@@ -111,7 +111,7 @@ const CreateCV = () => {
                 isStepActive(4) ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              Professional Details
+              4. Professional Details
             </span>
           </div>
         </div>

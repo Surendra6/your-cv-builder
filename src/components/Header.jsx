@@ -30,9 +30,34 @@ const Header = () => {
           <h1 className="text-4xl font-bold text-blue-500 hidden md:inline">
             Your CV Builder
           </h1>
+
+          {/* <div className="flex items-center">
+          <div className="flex items-center">
+            <span className="text-red-600 text-3xl md:text-5xl font-semibold">
+              Y
+            </span>
+            <div className="flex flex-col">
+              <span
+                style={{ lineHeight: 1 }}
+                className="text-green-500 leading-none text-sm md:text-xl font-semibold "
+              >
+                CV
+              </span>
+              <span
+                style={{ lineHeight: 1 }}
+                className="text-gray-600 leading-none text-sm md:text-xl font-semibold "
+              >
+                our
+              </span>
+            </div>
+          </div>
+          <span className="text-blue-400 text-3xl md:text-5xl font-semibold">
+            Builder
+          </span>
+        </div> */}
         </div>
 
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-3 md:gap-5">
           <NavLink
             label="Home"
             icon={<img src={Home} className="size-6" />}

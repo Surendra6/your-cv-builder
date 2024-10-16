@@ -39,7 +39,7 @@ const Home = () => {
           <SelectCoverLetterTemplate />
         </main>
 
-        <footer className="bg-gray-800 text-white py-4 text-center">
+        <footer className="bg-gray-800 text-white p-4 text-center">
           <p>
             All user data is stored locally, ensuring privacy and user control.{" "}
             <Link
