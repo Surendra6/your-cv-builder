@@ -1,10 +1,25 @@
 import { useState } from "react";
-import WorkInProgress from "./WorkInProgress";
 import { FaUser, FaUniversity, FaWrench, FaBriefcase } from "react-icons/fa";
 import PersonalDetails from "../components/PersonalDetails";
+import Education from "../components/Education";
+import Skills from "../components/Skills";
+import ProfessionalDetails from "../components/ProfessionalDetails";
+import Button from "../design-system/Button";
 
 const CreateCV = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [skills, setSkills] = useState([]);
+  const [jobs, setJobs] = useState([
+    {
+      title: "",
+      company: "",
+      startDate: "",
+      endDate: "",
+      city: "",
+      country: "",
+      responsibilities: "",
+    },
+  ]);
 
   const handleNext = () => {
     if (currentStep < 4) setCurrentStep(currentStep + 1);
@@ -119,32 +134,24 @@ const CreateCV = () => {
 
       {/* Stepper Forms */}
       {currentStep === 1 && <PersonalDetails />}
-      {currentStep === 2 && <WorkInProgress />}
-      {currentStep === 3 && <WorkInProgress />}
-      {currentStep === 4 && <WorkInProgress />}
+      {currentStep === 2 && <Education />}
+      {currentStep === 3 && <Skills skills={skills} setSkills={setSkills} />}
+      {currentStep === 4 && (
+        <ProfessionalDetails jobs={jobs} setJobs={setJobs} />
+      )}
 
       {/* Navigation Buttons */}
       <div className="flex justify-between mt-8">
-        <button
+        <Button
+          label="Previous"
           onClick={handlePrevious}
-          className={`bg-gray-500 text-white p-2 rounded ${
-            currentStep === 1 ? "invisible" : ""
-          }`}
-        >
-          Previous
-        </button>
+          styledClasses={`${currentStep === 1 ? "invisible" : ""}`}
+        />
 
         {currentStep < 4 ? (
-          <button
-            onClick={handleNext}
-            className="bg-blue-500 text-white p-2 rounded"
-          >
-            Next
-          </button>
+          <Button label="Next" onClick={handleNext} />
         ) : (
-          <button className="bg-green-500 text-white p-2 rounded">
-            Submit
-          </button>
+          <Button label="Submit" onClick={handleNext} />
         )}
       </div>
     </div>

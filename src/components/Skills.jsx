@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { MdDelete } from "react-icons/md";
+import Textfield from "../design-system/Textfield";
+import Button from "../design-system/Button";
 
 const Skills = ({ skills, setSkills }) => {
   const [newSkill, setNewSkill] = useState("");
@@ -22,29 +24,24 @@ const Skills = ({ skills, setSkills }) => {
   return (
     <div>
       <h2 className="text-lg font-semibold mb-4">Skills</h2>
-      <div className="flex mb-4">
-        <input
-          type="text"
+      <div className="flex mb-4 gap-2">
+        <Textfield
+          label={"Add Skill"}
           value={newSkill}
           onChange={(e) => setNewSkill(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Enter skill and press Enter"
-          className="border p-2 rounded flex-grow"
+          onKeyDown={handleKeyPress}
+          styleClasses="flex-grow"
         />
-        <button
-          onClick={addSkill}
-          className="ml-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-        >
-          Add
-        </button>
+
+        <Button label="Add" onClick={addSkill} />
       </div>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-center bg-gray-200 p-2 rounded"
+            className="flex items-center rounded border border-cyan-500 px-2.5 py-1 text-xs text-grey-700 font-semibold"
           >
-            <span>{skill}</span>
+            <span className="text-cyan-500">{skill}</span>
             <button
               onClick={() => removeSkill(index)}
               className="ml-2 text-red-500"

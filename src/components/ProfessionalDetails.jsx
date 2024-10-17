@@ -1,3 +1,6 @@
+import Button from "../design-system/Button";
+import Textfield from "../design-system/Textfield";
+
 const ProfessionalDetails = ({ jobs, setJobs }) => {
   const addJobSection = () => {
     setJobs([
@@ -24,11 +27,7 @@ const ProfessionalDetails = ({ jobs, setJobs }) => {
     <div>
       <h2 className="text-lg font-semibold mb-4">Professional Details</h2>
       <div className="mb-4">
-        <input
-          type="text"
-          placeholder="CV Title"
-          className="border p-2 w-full rounded"
-        />
+        <Textfield label={"CV Title"} />
       </div>
       <div className="mb-4">
         <textarea
@@ -42,51 +41,42 @@ const ProfessionalDetails = ({ jobs, setJobs }) => {
       {jobs.map((job, index) => (
         <div key={index} className="mb-4 border p-4 rounded">
           <div className="grid grid-cols-2 gap-4 mb-2">
-            <input
-              type="text"
-              placeholder="Job Title"
-              className="border p-2 rounded"
+            <Textfield
+              label={"Job Title"}
               value={job.title}
               onChange={(e) => handleJobChange(index, "title", e.target.value)}
             />
-            <input
-              type="text"
-              placeholder="Company"
-              className="border p-2 rounded"
+            <Textfield
+              label={"Company"}
               value={job.company}
               onChange={(e) =>
                 handleJobChange(index, "company", e.target.value)
               }
             />
-            <input
-              type="date"
-              placeholder="Start Date"
-              className="border p-2 rounded"
+            <Textfield
+              label={"Start Date"}
               value={job.startDate}
               onChange={(e) =>
                 handleJobChange(index, "startDate", e.target.value)
               }
             />
-            <input
-              type="date"
-              placeholder="End Date"
-              className="border p-2 rounded"
+
+            <Textfield
+              label={"End Date"}
               value={job.endDate}
               onChange={(e) =>
                 handleJobChange(index, "endDate", e.target.value)
               }
             />
-            <input
-              type="text"
-              placeholder="City"
-              className="border p-2 rounded"
+
+            <Textfield
+              label={"City"}
               value={job.city}
               onChange={(e) => handleJobChange(index, "city", e.target.value)}
             />
-            <input
-              type="text"
-              placeholder="Country"
-              className="border p-2 rounded"
+
+            <Textfield
+              label={"Country"}
               value={job.country}
               onChange={(e) =>
                 handleJobChange(index, "country", e.target.value)
@@ -106,12 +96,7 @@ const ProfessionalDetails = ({ jobs, setJobs }) => {
         </div>
       ))}
 
-      <button
-        onClick={addJobSection}
-        className="bg-green-500 text-white p-2 rounded hover:bg-green-600 mb-4"
-      >
-        Add Job Section
-      </button>
+      <Button label="Add Job Section" onClick={addJobSection} />
     </div>
   );
 };
