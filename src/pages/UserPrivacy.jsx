@@ -1,7 +1,7 @@
 const UserPrivacy = () => {
   return (
     <div className="bg-gray-50 flex flex-col">
-      <header className="bg-blue-700 text-white py-8 shadow-md text-center">
+      <header className="bg-gray-700 text-white py-8 shadow-md text-center">
         <h1 className="text-4xl font-bold">User Privacy & Data Control</h1>
       </header>
 
@@ -56,7 +56,7 @@ const UserPrivacy = () => {
         </section>
       </main>
 
-      <footer className="bg-gray-800 text-white py-4 text-center">
+      <footer className="bg-gray-700 text-white py-4 text-center">
         <p>
           All user data is stored locally. Manage your data for complete
           control.

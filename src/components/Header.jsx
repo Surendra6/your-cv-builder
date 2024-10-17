@@ -27,7 +27,7 @@ const Header = () => {
       <div className="mx-auto flex justify-between px-5 items-center">
         <div className="flex items-center gap-2">
           <img src={logo} className="h-8 md:h-10 " />
-          <h1 className="text-4xl font-bold text-gray-700 hidden md:inline">
+          <h1 className="text-4xl font-bold text-gray-600 hidden md:inline">
             Your CV Builder
           </h1>
 
