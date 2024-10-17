@@ -22,8 +22,8 @@ const Home = () => {
     </div>
   ) : (
     <>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <header className="bg-blue-500 text-white py-8 shadow-md text-center">
+      <div className="bg-gray-50 flex flex-col">
+        <header className="bg-gray-700 text-white px-5 py-8 shadow-md text-center">
           <h1 className="text-4xl md:text-5xl font-bold">Your CV Builder</h1>
           <p className="text-lg md:text-xl mt-2">
             Craft Your Professional CV & Cover Letter with Ease
@@ -39,7 +39,7 @@ const Home = () => {
           <SelectCoverLetterTemplate />
         </main>
 
-        <footer className="bg-gray-800 text-white p-4 text-center">
+        <footer className="bg-gray-700 text-white p-4 text-center">
           <p>
             All user data is stored locally, ensuring privacy and user control.{" "}
             <Link

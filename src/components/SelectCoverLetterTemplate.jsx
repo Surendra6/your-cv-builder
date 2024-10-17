@@ -18,11 +18,11 @@ const SelectCoverLetterTemplate = () => {
         {coverLetterTemplates.map((template) => (
           <div
             key={template.id}
-            className="flex flex-col items-center bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform cursor-pointer"
+            className="max-w-md flex flex-col items-center bg-white p-5 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform cursor-pointer"
             onClick={() => handleCoverLetterTemplateSelection(template.id)}
           >
             <img src={template.image} alt={template.name} className="h-56" />
-            <div className="p-6">
+            <div className="mt-5 text-center">
               <h3 className="text-xl font-semibold text-gray-700">
                 {template.name}
               </h3>

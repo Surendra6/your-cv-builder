@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-2.jpg";
 import { FaGithub } from "react-icons/fa";
 import { BiSolidHome } from "react-icons/bi";
-import { SiReaddotcv } from "react-icons/si";
 import { FaEnvelopeOpenText } from "react-icons/fa";
+import { PiReadCvLogoFill } from "react-icons/pi";
 
 const NavLink = ({ label, icon, route, currentPath }) => {
   return (
@@ -25,9 +25,9 @@ const Header = () => {
   return (
     <header className="bg-white text-gray-400 shadow-md w-full py-0.5 md:py-1">
       <div className="mx-auto flex justify-between px-5 items-center">
-        <div className="flex items-center">
-          <img src={logo} className="size-8 md:size-10 " />
-          <h1 className="text-4xl font-bold text-blue-500 hidden md:inline">
+        <div className="flex items-center gap-2">
+          <img src={logo} className="h-8 md:h-10 " />
+          <h1 className="text-4xl font-bold text-gray-700 hidden md:inline">
             Your CV Builder
           </h1>
 
@@ -66,7 +66,7 @@ const Header = () => {
           />
           <NavLink
             label="CV Builder"
-            icon={<SiReaddotcv className="size-6 md:size-6" />}
+            icon={<PiReadCvLogoFill className="size-6 md:size-6" />}
             route="/your-cv-builder/cv-builder"
             currentPath={pathname}
           />

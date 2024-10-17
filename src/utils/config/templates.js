@@ -1,6 +1,6 @@
-import CVTemplate1 from "../../assets/cv-template-1.png";
-import CVTemplate2 from "../../assets/cv-template-2.png";
-import CVTemplate3 from "../../assets/cv-template-3.png";
+import CVTemplate1 from "../../assets/cv-template-1.jpg";
+import CVTemplate2 from "../../assets/cv-template-2.jpg";
+import CVTemplate3 from "../../assets/cv-template-3.jpg";
 
 const cvTemplates = [
   {
