@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { FaGithub } from "react-icons/fa";
-import CVBuilderImage from "../assets/cv-builder.png";
-import CoverLetter from "../assets/cover-letter.png";
-import Home from "../assets/home.png";
+import { BiSolidHome } from "react-icons/bi";
+import { SiReaddotcv } from "react-icons/si";
+import { FaEnvelopeOpenText } from "react-icons/fa";
 
 const NavLink = ({ label, icon, route, currentPath }) => {
   return (
@@ -60,19 +60,19 @@ const Header = () => {
         <nav className="flex items-center gap-3 md:gap-5">
           <NavLink
             label="Home"
-            icon={<img src={Home} className="size-6" />}
+            icon={<BiSolidHome className="size-6 md:size-6" />}
             route="/your-cv-builder"
             currentPath={pathname}
           />
           <NavLink
             label="CV Builder"
-            icon={<img src={CVBuilderImage} className="size-6 md:size-5" />}
+            icon={<SiReaddotcv className="size-6 md:size-6" />}
             route="/your-cv-builder/cv-builder"
             currentPath={pathname}
           />
           <NavLink
             label="Cover Letter"
-            icon={<img src={CoverLetter} className="size-6 md:size-5" />}
+            icon={<FaEnvelopeOpenText className="size-6 md:size-6" />}
             route="/your-cv-builder/cover-letter"
             currentPath={pathname}
           />
