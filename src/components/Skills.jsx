@@ -3,13 +3,16 @@ import { MdDelete } from "react-icons/md";
 import Textfield from "../design-system/Textfield";
 import Button from "../design-system/Button";
 
-const Skills = ({ skills, setSkills }) => {
+const Skills = ({ skills, dispatch }) => {
   const [newSkill, setNewSkill] = useState("");
 
   const addSkill = () => {
     if (newSkill.trim()) {
-      setSkills([...skills, newSkill.trim()]);
       setNewSkill("");
+      dispatch({
+        type: "ADD_SKILL",
+        payload: newSkill.trim(),
+      });
     }
   };
 
@@ -18,7 +21,10 @@ const Skills = ({ skills, setSkills }) => {
   };
 
   const removeSkill = (index) => {
-    setSkills(skills.filter((_, i) => i !== index));
+    dispatch({
+      type: "REMOVE_SKILL",
+      payload: index,
+    });
   };
 
   return (

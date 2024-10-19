@@ -1,4 +1,11 @@
-const Textfield = ({ label, value, styleClasses, onChange, onKeyDown }) => {
+const Textfield = ({
+  label,
+  name,
+  value,
+  styleClasses,
+  onChange,
+  onKeyDown,
+}) => {
   return (
     <label
       htmlFor={label}
@@ -7,6 +14,7 @@ const Textfield = ({ label, value, styleClasses, onChange, onKeyDown }) => {
       <input
         type="text"
         className="text-black w-full p-2 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+        name={name}
         placeholder={label}
         value={value}
         onChange={onChange}

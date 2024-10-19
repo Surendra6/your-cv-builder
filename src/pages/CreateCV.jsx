@@ -5,10 +5,10 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import ProfessionalDetails from "../components/ProfessionalDetails";
 import Button from "../design-system/Button";
+import { useFormReducer } from "../hooks/common/useFormReducer";
 
 const CreateCV = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const [skills, setSkills] = useState([]);
   const [jobs, setJobs] = useState([
     {
       title: "",
@@ -20,9 +20,11 @@ const CreateCV = () => {
       responsibilities: "",
     },
   ]);
+  const [state, dispatch] = useFormReducer();
 
   const handleNext = () => {
     if (currentStep < 4) setCurrentStep(currentStep + 1);
+    console.log(state);
   };
 
   const handlePrevious = () => {
@@ -133,9 +135,18 @@ const CreateCV = () => {
       </div>
 
       {/* Stepper Forms */}
-      {currentStep === 1 && <PersonalDetails />}
-      {currentStep === 2 && <Education />}
-      {currentStep === 3 && <Skills skills={skills} setSkills={setSkills} />}
+      {currentStep === 1 && (
+        <PersonalDetails
+          personalDetails={state.personalDetails}
+          dispatch={dispatch}
+        />
+      )}
+      {currentStep === 2 && (
+        <Education education={state.education} dispatch={dispatch} />
+      )}
+      {currentStep === 3 && (
+        <Skills skills={state.skills} dispatch={dispatch} />
+      )}
       {currentStep === 4 && (
         <ProfessionalDetails jobs={jobs} setJobs={setJobs} />
       )}
